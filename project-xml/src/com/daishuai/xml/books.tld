@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE books SYSTEM "book.dtd">
+<books>
+    <book>
+        <title>Think In Java</title>
+        <author>DaiShuai</author>
+        <price>100.00</price>
+        <description>Java开发必读宝典</description>
+    </book>
+</books>
