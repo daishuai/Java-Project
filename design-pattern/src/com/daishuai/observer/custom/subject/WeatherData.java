@@ -2,6 +2,7 @@ package com.daishuai.observer.custom.subject;
 
 import com.daishuai.observer.custom.observer.Observer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,7 +14,7 @@ import java.util.List;
  */
 public class WeatherData implements Subject {
 
-    private List<Observer> observers;
+    private List<Observer> observers = new ArrayList<>();
 
     private float temperature;
 
@@ -69,9 +70,19 @@ public class WeatherData implements Subject {
     @Override
     public void notifyObservers() {
         for (Observer observer : observers){
-            observer.update();
+            observer.update(this.temperature, this.humidity, this.pressure);
         }
     }
 
+    public void setMeasurements(float temperature, float humidity, float pressure){
+        this.temperature = temperature;
+        this.humidity = humidity;
+        this.pressure = pressure;
+        this.measurementsChange();
+    }
+
+    public void measurementsChange() {
+        this.notifyObservers();
+    }
 
 }

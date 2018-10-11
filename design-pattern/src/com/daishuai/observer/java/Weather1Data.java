@@ -9,7 +9,7 @@ import java.util.Observable;
  * @Version: 1.0
  * Copyright: Copyright (c) 2018
  */
-public class WeatherData extends Observable {
+public class Weather1Data extends Observable {
 
     private float temperature;
 
@@ -42,13 +42,14 @@ public class WeatherData extends Observable {
     }
 
     public void measurementsChange(){
-        this.setChanged();
-        this.notifyObservers();
+        setChanged();
+        notifyObservers();
     }
 
     public void setMeasurements(float temperature, float humidity, float pressure){
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;
+        this.measurementsChange();
     }
 }
