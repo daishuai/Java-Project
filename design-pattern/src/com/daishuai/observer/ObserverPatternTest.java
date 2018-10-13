@@ -11,6 +11,7 @@ import com.daishuai.observer.java.Weather1Data;
 
 /**
  * @Description: 观察者模式（Observer Pattern）:
+ * 定义了对象之间的一对多依赖，这样以来，当一个对象改变状态时，他的所有依赖着都会收到通知并更新。
  * @Author: daishuai
  * @CreateDate: 2018/10/8 21:57
  * @Version: 1.0
